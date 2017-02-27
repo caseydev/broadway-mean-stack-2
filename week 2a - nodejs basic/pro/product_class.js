@@ -6,3 +6,4 @@ class Product{
     this.discount=discount;
   }
 }
+module.exports = Product;
