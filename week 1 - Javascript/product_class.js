@@ -1,4 +1,4 @@
-// using class ECMA6
+//creating javascript using class feature in ECMA6
 class Product{
   constructor(title,price,discount){
     this.title=title;
@@ -12,7 +12,7 @@ console.log(product1.title)
 var product2=new Product("P2",200,10);
 console.log(product2.title)
 
-// string literal
+// string literal - concatenation demo
 var name = "madan";
 var x = `
 My Name is ${name}.

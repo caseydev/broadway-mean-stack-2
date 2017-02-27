@@ -1,3 +1,4 @@
+// Module Revealing pattern demo
 var counterTest=(function(){
   var counter=0;
 function privatefun(){

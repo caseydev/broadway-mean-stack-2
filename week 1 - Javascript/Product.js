@@ -1,4 +1,4 @@
-
+// javascript object and function demo
 // normal javascript function
 function funA(message){
   return message;
