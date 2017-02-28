@@ -1,1 +1,1 @@
-hello data from file reading.
+hello data from file reading.This just demo for reading file.
