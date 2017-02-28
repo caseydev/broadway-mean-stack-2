@@ -1,9 +1,9 @@
 # source code of broadway mean stack tutorial class 
 Mean Stack class tutorial prepare while mentoring
 
- ## MEAN is a free and open-source JavaScript software stack for building dynamic web sites and web applications.
+ ##  MEAN is a free and open-source JavaScript software stack for building dynamic web sites and web applications.
  
- ## The MEAN stack is MongoDB, Express.js, Angular, and Node.js. Because all components of the MEAN stack support programs written in JavaScript, MEAN applications can be written in one language for both server-side and client-side execution environments.
+ ##  The MEAN stack is MongoDB, Express.js, Angular, and Node.js. Because all components of the MEAN stack support programs written in JavaScript, MEAN applications can be written in one language for both server-side and client-side execution environments.
  
 ## Components
 
