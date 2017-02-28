@@ -13,4 +13,4 @@ Mean Stack class tutorial prepare while mentoring
  *  **Node.js**, an execution environment for event-driven server-side and networking applications
  ___
  
-   ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+   ![alt text](https://avatars0.githubusercontent.com/u/2868823?v=3&s=40 "Logo Title Text 1")
