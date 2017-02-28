@@ -1,4 +1,4 @@
-# broadway-mean-stack-2
+# source code of broadway mean stack tutorial class 
 Mean Stack class tutorial prepare while mentoring
 
  ### MEAN is a free and open-source JavaScript software stack for building dynamic web sites and web applications.
