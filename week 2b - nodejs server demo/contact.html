@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Home - Simply Me</title>
+  <title>Contact Us - Simply Me</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -77,38 +77,60 @@
 
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
-  <h3 class="margin">Who Am I?</h3>
+  <h3 class="margin">Contact us</h3>
   <img src="https://www.w3schools.com/bootstrap/bird.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
   <h3>I'm an adventurer</h3>
 </div>
 
 <!-- Second Container -->
 <div class="container-fluid bg-2 text-center">
-  <h3 class="margin">What Am I?</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-  <a href="#" class="btn btn-default btn-lg">
-    <span class="glyphicon glyphicon-search"></span> Search
-  </a>
+ <div class="row">
+   
+               <div class="form-group">
+                   <label for="form_name">Firstname *</label>
+                   <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                   <div class="help-block with-errors"></div>
+               </div>
+
+
+               <div class="form-group">
+                   <label for="form_lastname">Lastname *</label>
+                   <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                   <div class="help-block with-errors"></div>
+               </div>
+
+
+
+               <div class="form-group">
+                   <label for="form_email">Email *</label>
+                   <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                   <div class="help-block with-errors"></div>
+               </div>
+
+
+               <div class="form-group">
+                   <label for="form_phone">Phone</label>
+                   <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone">
+                   <div class="help-block with-errors"></div>
+               </div>
+
+
+
+
+               <div class="form-group">
+                   <label for="form_message">Message *</label>
+                   <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                   <div class="help-block with-errors"></div>
+               </div>
+
+           <div class="col-md-12">
+               <input type="submit" class="btn btn-success btn-send" value="Send message">
+           </div>
+       </div>
+       </div>
 </div>
 
 <!-- Third Container (Grid) -->
-<div class="container-fluid bg-3 text-center">
-  <h3 class="margin">Where To Find Me?</h3><br>
-  <div class="row">
-    <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="https://www.w3schools.com/bootstrap/birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="https://www.w3schools.com/bootstrap/birds2.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="https://www.w3schools.com/bootstrap/birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-    </div>
-  </div>
-</div>
 
 <!-- Footer -->
 <footer class="container-fluid bg-4 text-center">
