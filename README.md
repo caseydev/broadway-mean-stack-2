@@ -12,5 +12,5 @@ Mean Stack class tutorial prepare while mentoring
  *  **Angular.js**, a JavaScript MVC framework that runs in browser JavaScript engines
  *  **Node.js**, an execution environment for event-driven server-side and networking applications
  ___
- 
+ ![alt text](https://upload.wikimedia.org/wikipedia/commons/b/b1/Meanstack-624x250.jpg "Logo Title Text 1")
    ![alt text](https://avatars0.githubusercontent.com/u/2868823?v=3&s=40 "Logo Title Text 1")
