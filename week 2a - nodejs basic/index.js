@@ -25,7 +25,7 @@ else{
 // var path = url.parse(request.url).pathname;
 var server=http.createServer(function(request,response){
   response.writeHead(200, {"Content-Type": "text/html"});
-  response.write("hello client i ma sending response from nodejs server");
+  response.write("hello all, client i'm sending response from nodejs server");
   response.end();
 });
 server.listen(3000,function (err) {
