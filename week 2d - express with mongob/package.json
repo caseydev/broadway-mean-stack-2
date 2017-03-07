@@ -1,5 +1,5 @@
 {
-  "name": "week-2d---express-generator",
+  "name": "week-2d---express-with-mongob",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -11,6 +11,7 @@
     "debug": "~2.6.0",
     "ejs": "~2.5.5",
     "express": "~4.14.1",
+    "mongoose": "^4.8.6",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.2"
   }
