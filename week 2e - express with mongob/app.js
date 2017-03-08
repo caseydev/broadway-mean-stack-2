@@ -12,7 +12,7 @@ var product = require('./routes/Product');
 
 //database connection
 var url="mongodb://localhost:27017/Meanstackdemo";
-mongoose.connect("mongodb://localhost:27017/Meanstackdemo")
+mongoose.connect("mongodb://localhost:27017/Meanstackdemo");
 var connection=mongoose.connection;
   connection.on('connected', function(){
       console.log('Mongoose connected to ' + url);
