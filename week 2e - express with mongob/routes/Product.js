@@ -35,7 +35,14 @@ router.post('/create', function(req, res, next) {
      res.redirect("/Product");
    });
 });
-router.get('/details', function(req, res, next) {
-  res.render("Product/details",{title:'product details page'});
+router.get('/details/:id', function(req, res, next) { //findById
+    //product.findById(req.params.id,function (err,data){
+    product.findById(req.params.id,function (err,data){
+        res.render("Product/details",{title:'product details page',product:data});
+    });
+});
+router.put('/create', function(req, res, next) {
+  console.log(req.method)
+  res.render("Product/create",{title:'product update page'});
 });
 module.exports = router;

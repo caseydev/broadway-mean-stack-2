@@ -27,8 +27,7 @@
       <% include ../header.ejs %>
 
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-
+    <p>Enjoy the widest variety of products at the best prices in Nepal</p>
 
         <div class="container">
             <!--<% product.forEach(function (item) { %>-->
@@ -51,7 +50,7 @@
                         <div class="col-md-7 col-sm-12 col-xs-12">
                             <div class="product-deatil">
                                 <h5 class="name">
-                                    <a href="#">
+                                    <a href="/product/details/<%= product[i]._id%>">
                                         <%= product[i].Title%> <span><%= product[i].category%></span>
                                     </a>
                                 </h5>

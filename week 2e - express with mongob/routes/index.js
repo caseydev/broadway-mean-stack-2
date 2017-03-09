@@ -8,4 +8,7 @@ router.get('/', function(req, res, next) {
 router.get('/aboutus', function(req, res, next) {
   res.render('home/aboutus', { title: 'About us',description:"Demo about us page" });
 });
+router.get('/contact', function(req, res, next) {
+  res.render('home/contact', { title: 'Contact us',description:"Demo about us page" });
+});
 module.exports = router;

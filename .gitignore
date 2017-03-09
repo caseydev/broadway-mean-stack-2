@@ -38,3 +38,5 @@ jspm_packages
 
 #idea file webstorm
 .idea
+#visual studio code
+.vscode
