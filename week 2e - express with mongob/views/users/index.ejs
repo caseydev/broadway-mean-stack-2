@@ -23,16 +23,23 @@
   <body>
     <div class="container">
       <% include ../header.ejs %>
-
+  <div class = "well">
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-        <ul class="list-group">
+    <p>Welcome to <%= title %> </p>
+    </div>
+    <div class = "list-group">
         <% users.forEach(function (item) { %>
-            <li class="list-group-item">
-        <%= item.FirstName%>  <%= item.LastName%>
-            </li>
+                <a href = "#" class = "list-group-item">
+                  <h4 class = "list-group-item-heading">
+                     <%= item.FirstName%> <%= item.LastName%>
+                  </h4>
+                <p class = "list-group-item-text">
+                  <span class = "label label-primary"><%= item.Email%></span>
+                   <%= item.Address%>, <%= item.DOB.toLocaleDateString()%>
+                </p>
+              </a>
         <%})%>
-        </ul>
+      </div>
 </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->

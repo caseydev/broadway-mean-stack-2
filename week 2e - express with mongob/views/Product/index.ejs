@@ -41,7 +41,7 @@
                     <div class="row">
                         <div class="col-md-5 col-sm-12 col-xs-12">
                             <div class="product-image">
-                                <img src="http://192.241.236.31/themes/preview/smartadmin/1.8.x/ajax/img/demo/e-comm/1.png" alt="194x228" class="img-responsive">
+                                <img src="http://placehold.it/350x400?text=Product" alt="194x228" class="img-responsive">
 						<span class="tag2 hot">
 							<%= product[i].Brand%>
 						</span>
@@ -49,8 +49,8 @@
                         </div>
                         <div class="col-md-7 col-sm-12 col-xs-12">
                             <div class="product-deatil">
+                              <a class="pull-right" href="/Product/delete/<%= product[i]._id%>">Delete <i class="fa fa-trash"></i></a>
                                 <h5 class="name">
-                                    <a class="pull-right" href="/Product/delete/<%= product[i]._id%>">Delete</a>
                                     <a href="/product/details/<%= product[i]._id%>">
                                         <%= product[i].Title%> <span><%= product[i].category%></span>
                                     </a>
@@ -70,12 +70,12 @@
                                     </div>
                                     <div class="col-md-6 col-sm-6 col-xs-6">
                                         <div class="rating">
-                                            <%for(var j=1;j<= product[i].Rating;j++){%>
-                                            <label for="stars-rating-<%=j%>"><i class="fa fa-star"></i></label>
-                                            <%if(j >= product[i].Rating){%>
-                                            <label for="stars-rating-<%=j%>"><i class="fa fa-star text-primary"></i></label>
+                                            <%for(var j=0;j< 5;j++){%>
+                                            <%if(j > product[i].Rating){%>
+                                            <label for="stars-rating-<%=j+1%>"><i class="fa fa-star"></i></label>
+                                            <%}else{%>
+                                              <label for="stars-rating-<%=j+1%>"><i class="fa fa-star  text-primary"></i></label>
                                             <%}}%>
-
 
                                         </div>
                                     </div>
