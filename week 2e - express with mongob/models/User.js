@@ -3,7 +3,7 @@ var userSchema=new mongoose.Schema(
   {
     FirstName:String,
     LastName:String,
-    DOB:Date,
+    DOB:{type:Date,default:Date.now},
     Address:String,
     UserName:String,
     Email:String

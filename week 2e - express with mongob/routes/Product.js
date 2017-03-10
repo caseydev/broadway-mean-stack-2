@@ -25,6 +25,7 @@ router.post('/create', function(req, res, next) {
     Price:req.body.price,
     Brand:req.body.brand,
     category:req.body.category,
+    Rating:req.body.rating,
     Description:req.body.description
   });
    product1.save(function(err,data){
@@ -44,5 +45,14 @@ router.get('/details/:id', function(req, res, next) { //findById
 router.put('/create', function(req, res, next) {
   console.log(req.method)
   res.render("Product/create",{title:'product update page'});
+});
+router.get('/delete/:id', function(req, res, next) {
+    var idToDelete=req.params.id;
+    console.log(idToDelete);
+    product.findByIdAndRemove(idToDelete,function (err,data) {
+        if(err){
+        }
+        res.redirect("/Product")
+    });
 });
 module.exports = router;

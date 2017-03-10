@@ -26,6 +26,13 @@
 
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+        <ul class="list-group">
+        <% users.forEach(function (item) { %>
+            <li class="list-group-item">
+        <%= item.FirstName%>  <%= item.LastName%>
+            </li>
+        <%})%>
+        </ul>
 </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
