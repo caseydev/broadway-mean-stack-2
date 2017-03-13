@@ -49,7 +49,7 @@
                         </div>
                         <div class="col-md-7 col-sm-12 col-xs-12">
                             <div class="product-deatil">
-                              <a class="pull-right" href="/Product/delete/<%= product[i]._id%>">Delete <i class="fa fa-trash"></i></a>
+                              <a class="pull-right"onclick="return confirm('Are you sure want to delete item?')" on href="/Product/delete/<%= product[i]._id%>">Delete <i class="fa fa-trash"></i></a>
                                 <h5 class="name">
                                     <a href="/product/details/<%= product[i]._id%>">
                                         <%= product[i].Title%> <span><%= product[i].category%></span>
@@ -65,16 +65,18 @@
                             </div>
                             <div class="product-info smart-form">
                                 <div class="row">
+                                    <a href="/Product/edit/<%=product[i]._id%>" class="btn btn-success">Edit</a>
+
                                     <div class="col-md-6 col-sm-6 col-xs-6">
                                         <a href="javascript:void(0);" class="btn btn-success">Add to cart</a>
                                     </div>
                                     <div class="col-md-6 col-sm-6 col-xs-6">
                                         <div class="rating">
-                                            <%for(var j=0;j< 5;j++){%>
+                                            <%for(var j=1;j<= 5;j++){%>
                                             <%if(j > product[i].Rating){%>
-                                            <label for="stars-rating-<%=j+1%>"><i class="fa fa-star"></i></label>
+                                            <label for="stars-rating-<%=j%>"><i class="fa fa-star"></i></label>
                                             <%}else{%>
-                                              <label for="stars-rating-<%=j+1%>"><i class="fa fa-star  text-primary"></i></label>
+                                              <label for="stars-rating-<%=j%>"><i class="fa fa-star  text-primary"></i></label>
                                             <%}}%>
 
                                         </div>

@@ -65,17 +65,18 @@
                         <h2 class="name">
                             <%= product.Title%>
                             <small>Product by <a href="javascript:void(0);"><%= product.Brand%></a></small>
-                            <i class="fa fa-star fa-2x text-primary"></i>
-                            <i class="fa fa-star fa-2x text-primary"></i>
-                            <i class="fa fa-star fa-2x text-primary"></i>
-                            <i class="fa fa-star fa-2x text-primary"></i>
+                            <%for(var j=0;j< 5;j++){%>
+                            <%if(j > product.Rating){%>
                             <i class="fa fa-star fa-2x text-muted"></i>
+                            <%}else{%>
+                            <i class="fa fa-star fa-2x text-primary"></i>
+                            <%}}%>
                             <span class="fa fa-2x"><h5>(109) Votes</h5></span>
                             <a href="javascript:void(0);">109 customer reviews</a>
                         </h2>
                         <hr>
                         <h3 class="price-container">
-                            $129.54
+                           Rs <%= product.Price%>
                             <small>*includes tax</small>
                         </h3>
                         <div class="certified">

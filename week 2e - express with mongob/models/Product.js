@@ -9,7 +9,7 @@ var productSchema=new mongoose.Schema(
     Title:{type:String,required:true, trim: true},
     Price:{type:Number,required:true},
     Brand:{type:String,required:true},
-    category:{type:String},
+    categoryId:{type:mongoose.Schema.Types.ObjectId,ref:'category'},
     Description:{type:String},
     Rating:{type:Number},
     Review:[reviewSchema]
