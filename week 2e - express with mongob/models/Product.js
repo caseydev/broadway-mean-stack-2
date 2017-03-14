@@ -12,7 +12,8 @@ var productSchema=new mongoose.Schema(
     categoryId:{type:mongoose.Schema.Types.ObjectId,ref:'category'},
     Description:{type:String},
     Rating:{type:Number},
-    Review:[reviewSchema]
+    Review:[reviewSchema],
+    IsFeature:{type:Boolean}
   }
 );
 var model=mongoose.model("product",productSchema);

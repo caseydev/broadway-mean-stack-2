@@ -52,7 +52,7 @@
                               <a class="pull-right"onclick="return confirm('Are you sure want to delete item?')" on href="/Product/delete/<%= product[i]._id%>">Delete <i class="fa fa-trash"></i></a>
                                 <h5 class="name">
                                     <a href="/product/details/<%= product[i]._id%>">
-                                        <%= product[i].Title%> <span><%= product[i].category%></span>
+                                        <%= product[i].Title%> <span><%= product[i].categoryId.Name%></span>
                                     </a>
                                 </h5>
                                 <p class="price-container">

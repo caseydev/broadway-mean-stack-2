@@ -6,7 +6,7 @@ var category=require('../models/Category');
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   //retrieving data
-  product.find(function(err,data){
+  product.find().populate('categoryId','Name').exec(function(err,data){
     if(err){
       res.render("Product/index",{title:'error occured'});
     }
@@ -30,7 +30,8 @@ router.post('/create', function(req, res, next) {
     Brand:req.body.brand, 
     categoryId:req.body.categoryId,
     Rating:req.body.rating,
-    Description:req.body.description
+    Description:req.body.description,
+    IsFeature:req.body.isfeature
   });
    product1.save(function(err,data){
      if(err){
