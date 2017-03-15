@@ -26,6 +26,9 @@
   <div class = "well">
     <h1><%= title %></h1>
     <p>Welcome to <%= title %> </p>
+      <%if(isAuthenticated){%>
+      Hello Login user
+      <%}%>
     </div>
     <div class = "list-group">
         <% users.forEach(function (item) { %>

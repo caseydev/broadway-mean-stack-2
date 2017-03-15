@@ -6,7 +6,7 @@ var category=require('../models/Category');
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   //retrieving data
-  product.find().populate('categoryId','Name').exec(function(err,data){
+  product.find().populate('categoryId','Name -_id').exec(function(err,data){
     if(err){
       res.render("Product/index",{title:'error occured'});
     }
