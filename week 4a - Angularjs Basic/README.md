@@ -2,22 +2,20 @@ follow the following step on command window to run:
 
 Install dependencies:
 
-> npm install
+Install Bower
 
-Start your Express.js app at http://localhost:3000/:
+> npm install -g bower
 
-> npm start
+Bower requires node, npm and git.
 
+> bower init
 
-This project is created using express-generator. https://www.npmjs.com/package/express-generator
+Create a bower.json file for your package with bower init.
 
-To scaffold project using express-generator,follow following step.
+Then save new dependencies to your bower.json with bower install PACKAGE --save
 
-> npm install -g express-generator
+> bower install <package>
 
-Create the app:
+Search Bower packages and find the registered package names for your favorite projects.
 
-> express --view=ejs
-
-#### P.s Don't forget to run mongodb server using 
-> mongod
+https://bower.io/search/
