@@ -1,0 +1,20 @@
+{
+  "name": "angularjsfrontend",
+  "description": "follow the following step on command window to run:",
+  "main": "app.js",
+  "authors": [
+    "Madan Tamang <madan.tamang@agileitsolutions.net>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/madantamang/broadway-mean-stack-2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}

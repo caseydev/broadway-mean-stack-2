@@ -1,0 +1,11 @@
+{
+  "name": "angularjsproject",
+  "version": "1.0.0",
+  "description": "follow the following step on command window to run:",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
