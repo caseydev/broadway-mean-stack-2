@@ -14,7 +14,7 @@ Create a bower.json file for your package with bower init.
 
 Then save new dependencies to your bower.json with bower install PACKAGE --save
 
-> bower install <package>
+> bower install PACKAGE --save
 
 Search Bower packages and find the registered package names for your favorite projects.
 
