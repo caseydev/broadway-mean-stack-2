@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="/favicon.ico">
-
     <title>Home - Broadway</title>
-
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -33,69 +30,31 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">Project Express</a>
+                <a class="navbar-brand" href="#!/">Project Express</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="/">Home</a></li>
-                    <li><a href="/users">Users</a></li>
-                    <li class="dropdown">
-                        <a href="/Product" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Product <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/Product">List</a></li>
-                            <li><a href="/Product/Create">Create</a></li>
-                            <li><a href="/">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/aboutus">About Us</a></li>
-                    <li><a href="/contact">Contact Us</a></li>
+                        <a href="#!/">Home</a></li>
+                    <li><a href="#!/users">Users</a></li>
+                    <li><a href="#!/aboutus">About Us</a></li>
+                    <li><a href="#!/contactus">Contact Us</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/service">Services</a></li>
-                    <li><a href="/">News</a></li>
-                    <li><a href="/signup">Sign Up</a></li>
+                    <li><a href="#!/gallery">Photo Gallery</a></li>
+                    <li><a href="#!/news">News</a></li>
+                    <li><a href="#!/signup">Sign Up</a></li>
                     <li class="active">
-                        <a href="/login">Login <span class="sr-only">(current)</span></a>
+                        <a href="#!/login">Login <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
     </nav>
-<div  ng-controller="homeController">
-    <div class = "jumbotron">
-
-        <div class = "container">
-            {{title}}
-            <input type="text" ng-model="firstname" name="firstname">
-            <input type="text" ng-model="lastname" name="firstname">
-            <input type="checkbox" ng-model="show" name="show">
-            <h1>{{firstname}}</h1>
-            <p ng-bind="lastname"></p>
-
-            <p ng-hide="show">
-                <a class = "btn btn-primary btn-lg" role = "button">Learn more</a>
-            </p>
-        </div>
-
+    <div ng-view>
+        <!--page content-->
     </div>
-    <h2>Feature Movie</h2>
-    <div class="row">
-<input type="text" name="search" ng-model="search">
-        <div ng-repeat=" item in movieList | filter:search" class="col-sm-6 col-md-3">
-            <div class="thumbnail">
-                <img ng-src="{{item.url}}" alt="">
-                <div class="caption">
-                    <h3>{{item.name}}</h3>
-                    <p>{{item.rating}}</p>
-                    <p>Category <%= item.categoryId.Name%></p>
-                    <p><%= item.Description%></p>
-                    <p><a href="#" class="btn btn-primary" role="button">Details</a> <a href="#" class="btn btn-default" role="button">Add to Cart</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 </div>
 <!-- Bootstrap core JavaScript
 ================================================== -->
@@ -105,7 +64,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.js"></script>
 <script src="app.js"></script>
-<script src="homeController.js"></script>
+<script src="Controllers/homeController.js"></script>
+<script src="Controllers/AboutUsCtrl.js"></script>
+<script src="Controllers/UsersCtrl.js"></script>
+<script src="Controllers/ContactUsCtrl.js"></script>
+<script src="Controllers/photogalleryCtrl.js"></script>
 
 </body>
 </html>

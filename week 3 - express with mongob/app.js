@@ -29,6 +29,13 @@ var connection=mongoose.connection;
   connection.on('disconnected', function() {
       console.log("oops, Connection DisConnected.")
   });
+  //CORS middleware
+//var allowCrossDomain = function(req, res, next) {
+ //   res.header('Access-Control-Allow-Origin', '*');
+//    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+//    res.header('Access-Control-Allow-Headers', 'Content-Type');
+//    next();
+//}
   //start using express app
 var app = express();
 
@@ -42,6 +49,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(methodOverride('_method'));
+ //app.use(allowCrossDomain);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({secret: 'broadwaaaaaaaaaaayyyyyy',resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
