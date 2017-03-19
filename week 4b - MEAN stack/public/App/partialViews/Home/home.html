@@ -1,0 +1,28 @@
+<div class = "jumbotron">
+
+    <div class = "container">
+        <h1>{{title}}</h1>
+        <p>Welcome to {{title}}.</p>
+
+        <p>
+            <a class = "btn btn-primary btn-lg" role = "button">Learn more</a>
+        </p>
+    </div>
+
+</div>
+<h2>Feature Product</h2>
+<div class="row">
+
+    <div ng-repeat="item in ProductList" class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+            <img src="http://placehold.it/242x200?text=Feature_Product" alt="<%=item.Name%>">
+            <div class="caption">
+                <h3>{{item.Name}}</h3>
+                <p>By {{item.Brand}}</p>
+                <p>Category {{item.categoryId.Name}}</p>
+                <p>{{item.Description}}</p>
+                <p><a href="#" class="btn btn-primary" role="button">Details</a> <a href="#" class="btn btn-default" role="button">Add to Cart</a></p>
+            </div>
+        </div>
+    </div>
+</div>

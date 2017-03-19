@@ -1,0 +1,66 @@
+
+    <h1><%= title %></h1>
+    <p>Enjoy the widest variety of products at the best prices in Nepal</p>
+
+        <div class="container">
+            <!--<% product.forEach(function (item) { %>-->
+              <!--<%= item.Title%>-->
+            <!--<%})%>-->
+
+            <% for(var i=0;i< product.length;i++){%>
+            <div class="col-xs-12 col-md-6 bootstrap snippets">
+                <!-- product -->
+                <div class="product-content product-wrap clearfix">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-12 col-xs-12">
+                            <div class="product-image">
+                                <img src="http://placehold.it/350x400?text=Product" alt="194x228" class="img-responsive">
+						<span class="tag2 hot">
+							<%= product[i].Brand%>
+						</span>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-12 col-xs-12">
+                            <div class="product-deatil">
+                              <a class="pull-right"onclick="return confirm('Are you sure want to delete item?')" on href="/Product/delete/<%= product[i]._id%>">Delete <i class="fa fa-trash"></i></a>
+                                <h5 class="name">
+                                    <a href="/product/details/<%= product[i]._id%>">
+                                        <%= product[i].Title%> <span><%= product[i].categoryId.Name%></span>
+                                    </a>
+                                </h5>
+                                <p class="price-container">
+                                    <span>Rs <%= product[i].Price%></span>
+                                </p>
+                                <span class="tag1"></span>
+                            </div>
+                            <div class="description">
+                                <p><%= product[i].Description%> </p>
+                            </div>
+                            <div class="product-info smart-form">
+                                <div class="row">
+                                    <a href="/Product/edit/<%=product[i]._id%>" class="btn btn-success">Edit</a>
+
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <a href="javascript:void(0);" class="btn btn-success">Add to cart</a>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <div class="rating">
+                                            <%for(var j=1;j<= 5;j++){%>
+                                            <%if(j > product[i].Rating){%>
+                                            <label for="stars-rating-<%=j%>"><i class="fa fa-star"></i></label>
+                                            <%}else{%>
+                                              <label for="stars-rating-<%=j%>"><i class="fa fa-star  text-primary"></i></label>
+                                            <%}}%>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end product -->
+            </div>
+            <%}%>
+
+        </div>
