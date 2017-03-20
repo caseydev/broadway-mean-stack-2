@@ -3,7 +3,6 @@ var router = express.Router();
 var product=require('../../models/Product');
 var category=require('../../models/Category');
 var multer  = require('multer')
-var upload = multer({ dest: 'uploads/' })
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -23,7 +22,7 @@ router.get('/create',CheckAuthetication, function(req, res, next) {
         res.json("Product/create",{title:'product create page',category:data,currentUser:req.user});
     });
 });
-router.post('/create',upload.single('productimg'), function(req, res, next) {
+router.post('/create', function(req, res, next) {
   //saving data
     console.log('body contain',req.body);
   var product1=new product({
@@ -40,13 +39,13 @@ router.post('/create',upload.single('productimg'), function(req, res, next) {
        console.log(err);
      }
      console.log(data);
-     res.redirect("/Product");
+     res.json(data);
    });
 });
 router.get('/details/:id', function(req, res, next) { //findById
     //product.findOne({'title':},function (err,data){
     product.findById(req.params.id,function (err,data){
-        res.json("Product/details",{title:'product details page',product:data});
+        res.json({title:'product details page',product:data});
     });
 });
 router.get('/edit/:id',CheckAuthetication, function(req, res, next) {
@@ -73,7 +72,7 @@ router.put('/edit',CheckAuthetication, function(req, res, next) {
          if(err){
           //res.render("Product/edit")
          }
-         res.redirect("/Product");
+         res.json(data);
      })
 });
 router.get('/delete/:id',CheckAuthetication, function(req, res, next) {
@@ -82,7 +81,7 @@ router.get('/delete/:id',CheckAuthetication, function(req, res, next) {
     product.findByIdAndRemove(idToDelete,function (err,data) {
         if(err){
         }
-        res.redirect("/Product")
+        res.json(data);
     });
 });
 

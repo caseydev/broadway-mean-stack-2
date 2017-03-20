@@ -9,15 +9,15 @@ router.get('/', function(req, res, next) {
 //retrieving data
   User.find({},function(err,data){
     if(err){
-      res.render("users/index",{title:'error occured'});
+      res.json({title:'error occured'});
     }
     console.log(data);
-    res.render("users/index",{title:'Users Landing page',users:data,isAuthenticated:req.isAuthenticated(),currentUser:req.user});
+    res.json({title:'Users Landing page',users:data,isAuthenticated:req.isAuthenticated(),currentUser:req.user});
 
   });
 });
 
 router.get('/details', function(req, res, next) {
-  res.render("users/details",{title:'Users details Page'});
+  res.json({title:'Users details Page'});
 });
 module.exports = router;

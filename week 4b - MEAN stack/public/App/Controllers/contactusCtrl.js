@@ -8,5 +8,6 @@
  * @requires $scope
  * */
 apps.controller('contactusCtrl', function($scope){
+    $scope.title="Contact Us";
 
 });

@@ -30,7 +30,11 @@ apps.config(['$routeProvider','$locationProvider', function($routeProvider,$loca
     });
     $routeProvider.when('/Product', {
         templateUrl: '../App/partialViews/Product/index.html',
-      //  controller: 'ProductCtrl'
+        controller: 'ProductCtrl'
+    });
+    $routeProvider.when('/product/details/:id', {
+        templateUrl: '../App/partialViews/Product/details.html',
+          controller: 'ProductDetails'
     });
     $routeProvider.when('/Product/Create', {
         templateUrl: '../App/partialViews/Product/create.html',

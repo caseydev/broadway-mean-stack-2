@@ -1,9 +1,9 @@
 
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1>{{title}} </h1>
+    <p>Welcome to {{title}}</p>
     <div class="row">
 
-        <form class="form-horizontal" action="/login" method="POST">
+        <form class="form-horizontal" ng-submit="loginUser()" method="POST">
 
             <div class="form-group">
                 <label for="username" class="col-sm-2 control-label">UserName</label>
