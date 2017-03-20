@@ -13,7 +13,8 @@ var productSchema=new mongoose.Schema(
     Description:{type:String},
     Rating:{type:Number},
     Review:[reviewSchema],
-    IsFeature:{type:Boolean}
+    IsFeature:{type:Boolean},
+    Image:{type:String}
   }
 );
 var model=mongoose.model("product",productSchema);

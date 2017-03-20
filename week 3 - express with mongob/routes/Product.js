@@ -2,6 +2,18 @@ var express = require('express');
 var router = express.Router();
 var product=require('../models/Product');
 var category=require('../models/Category');
+// file upload setting using multer plugin
+var multer  = require('multer');
+var storage = multer.diskStorage({
+	destination: function(req, file, callback) {
+		callback(null, 'public/images/')
+	},
+	filename: function(req, file, callback) {
+    callback(null, file.originalname);
+	}
+})
+//initialize multer plugin
+var upload = multer({ storage: storage })
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -12,26 +24,28 @@ router.get('/', function(req, res, next) {
     }
     console.log(data);
     res.render("Product/index",{title:'product landing page',product:data,currentUser:req.user});
-
   });
-
 });
+
 router.get('/create',CheckAuthetication, function(req, res, next) {
     category.find(function (err,data) {
         res.render("Product/create",{title:'product create page',category:data,currentUser:req.user});
     });
 });
-router.post('/create',CheckAuthetication, function(req, res, next) {
+router.post('/create',CheckAuthetication, upload.single('productimg'), function(req, res, next) {
   //saving data
-    console.log('body contain',req.body);
+    console.log('file contain',req.file);
+    //console.log('body contain',req.body);
+    var fileName=req.file !=undefined ? req.file.filename:'NoDefaultImage.png';
   var product1=new product({
    Title:req.body.title,
     Price:req.body.price,
-    Brand:req.body.brand, 
+    Brand:req.body.brand,
     categoryId:req.body.categoryId,
     Rating:req.body.rating,
     Description:req.body.description,
-    IsFeature:req.body.isfeature
+    IsFeature:req.body.isfeature,
+    Image:fileName
   });
    product1.save(function(err,data){
      if(err){

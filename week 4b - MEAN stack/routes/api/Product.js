@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var product=require('../../models/Product');
 var category=require('../../models/Category');
+var multer  = require('multer')
+var upload = multer({ dest: 'uploads/' })
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -21,13 +23,13 @@ router.get('/create',CheckAuthetication, function(req, res, next) {
         res.json("Product/create",{title:'product create page',category:data,currentUser:req.user});
     });
 });
-router.post('/create',CheckAuthetication, function(req, res, next) {
+router.post('/create',upload.single('productimg'), function(req, res, next) {
   //saving data
     console.log('body contain',req.body);
   var product1=new product({
    Title:req.body.title,
     Price:req.body.price,
-    Brand:req.body.brand, 
+    Brand:req.body.brand,
     categoryId:req.body.categoryId,
     Rating:req.body.rating,
     Description:req.body.description,

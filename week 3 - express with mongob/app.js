@@ -8,6 +8,8 @@ var methodOverride = require('method-override');
 var mongoose = require('mongoose');
 var session=require('express-session');
 var passport=require('passport');
+var ejsLayouts = require('express-ejs-layouts');
+
 //import route defination file
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -24,7 +26,8 @@ var connection=mongoose.connection;
       console.log("Connection open on  " + url)
   });
   connection.on('error', function() {
-      console.log("Sorry, there is no mongo db server running.")
+      console.log("Sorry, there is no mongo db server running.");
+       process.exit(0);
   });
   connection.on('disconnected', function() {
       console.log("oops, Connection DisConnected.")
@@ -42,7 +45,7 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
+app.use(ejsLayouts);
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());

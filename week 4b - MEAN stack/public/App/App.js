@@ -22,7 +22,7 @@ apps.config(['$routeProvider','$locationProvider', function($routeProvider,$loca
     });
     $routeProvider.when('/signup', {
         templateUrl: '../App/partialViews/Home/signup.html',
-      //  controller: 'loginCtrl'
+        controller: 'signUpCtrl'
     });
     $routeProvider.when('/service', {
         templateUrl: '../App/partialViews/Home/service.html',
