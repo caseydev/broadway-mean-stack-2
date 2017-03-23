@@ -1,0 +1,40 @@
+{
+  "name": "MyMeanShop",
+  "version": "1.0.0",
+  "description": "MEAN Full Stack e-commerce Application",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "author": {
+    "name": "Madan Tamang",
+    "email": "click2madan@gmail.com",
+    "url": "http://www.madantamang.com.np/"
+  },
+  "keywords": [
+    "Node.js",
+    "e-commerce",
+    "AngularJS",
+    "Express",
+    "Mean",
+    "MongoDB",
+    "Shopping Cart",
+    "Single Page Web App"
+  ],
+  "homepage": "http://hamroshop.heroku.com/",
+  "main": "/bin/www",
+  "dependencies": {
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "ejs": "^2.5.6",
+    "express": "~4.14.1",
+    "express-session": "^1.15.1",
+    "mongoose": "^4.9.1",
+    "mongoose-session": "0.0.4",
+    "morgan": "~1.7.0",
+    "multer": "^1.3.0",
+    "passport": "^0.3.2",
+    "serve-favicon": "~2.3.2"
+  }
+}

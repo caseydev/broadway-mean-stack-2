@@ -1,0 +1,25 @@
+{
+  "name": "myshopapps",
+  "description": "shopping apps with cart,deal,promotion",
+  "main": "index.html",
+  "authors": [
+    "Madan Tamang"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/madantamang/broadway-mean-stack-2",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.6.3",
+    "angular-route": "^1.6.3",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "angular-ui-bootstrap": "^2.5.0"
+  }
+}
