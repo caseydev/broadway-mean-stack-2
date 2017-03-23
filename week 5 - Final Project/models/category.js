@@ -2,11 +2,11 @@ var mongoose=require('mongoose');
 var Schema=mongoose.Schema;
 
 var CategorySchema=new Schema({
-    Name:{type:String,require:true},
-    ParentCategory:{type:Number,default:0},
-    SubCategory:[{type:String}],
-    Description:{type:String},
-    IsActive:{type:Boolean}
+    name:{type:String,require:true},
+    parentCategory:{type: Schema.Types.ObjectId, ref: 'Category'},
+    subCategory:[{type: Schema.Types.ObjectId, ref: 'Category'}],
+    description:{type:String},
+    isActive:{type:Boolean}
 });
 
 var model= mongoose.model("Category",CategorySchema);

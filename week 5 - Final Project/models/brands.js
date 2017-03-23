@@ -2,10 +2,10 @@ var mongoose=require('mongoose');
 var Schema=mongoose.Schema;
 
 var BrandSchema=Schema({
-    Name:{type:String,require:true},
-    Image:{type:String},
-    Description:{type:String},
-    IsActive:{type:Boolean}
+    name:{type:String,require:true},
+    imageUrl:{type:String},
+    description:{type:String},
+    isActive:{ type: Boolean, default: true }
 });
 
 var model=new mongoose.model("Brand",BrandSchema);
