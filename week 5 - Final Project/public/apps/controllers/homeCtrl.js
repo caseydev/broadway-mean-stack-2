@@ -8,5 +8,5 @@
  * @requires $scope
  * */
 myApp.controller('homeCtrl', function($scope){
-
+ $scope.title="HomePage";
 });

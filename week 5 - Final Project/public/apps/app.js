@@ -1,10 +1,19 @@
 var myApp=angular.module('myshopapps', ['ngRoute','ui.bootstrap']);
 
-myApp.config(['$routeProvider', function($routeProvider){
+myApp.config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider){
+    $locationProvider.hashPrefix('');
     $routeProvider.when('/', {
-        templateUrl: '',
-        controller: ''
+        templateUrl: '/apps/partialViews/homepage/main.html',
+        controller: 'homeCtrl'
     });
-    $routeProvider.otherwise({redirectTo: '/4o4'});
+    $routeProvider.when('/login', {
+        templateUrl: '/apps/partialViews/account/login.html',
+        //controller: ''
+    });
+    $routeProvider.when('/products', {
+        templateUrl: '/apps/partialViews/homepage/main.html',
+        //controller: ''
+    });
+    $routeProvider.otherwise({redirectTo: '/404'});
     
 }]);

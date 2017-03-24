@@ -6,14 +6,19 @@ var OrderDetailsSchema = new Schema({
     quantity: Number,
     total: {type: Number }
 });
-
+var AddressSchema = new Schema({
+    Street:String,
+    City:String,
+    State:String,
+    Country:String
+});
 var OrderSchema = new Schema({
     // buyer details
     name: String,
     user: { type: Schema.Types.ObjectId, ref: 'User' },
     email: String,
-    shippingAddress: String,
-    billingAddress: String,
+    shippingAddress: AddressSchema,
+    billingAddress: AddressSchema,
     // price details
     items: [OrderDetailsSchema],
     shipping: {type: Number, default: 0.0 },

@@ -11,7 +11,9 @@ var UserSchema=new Schema({
         type: String,
         default: 'user'
     },
-    password: String
+    password: String,
+    profileImageUrl:String,
+    address:String
 });
 
 var model= mongoose.model("User",UserSchema);

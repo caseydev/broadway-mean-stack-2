@@ -21,7 +21,6 @@ var url="mongodb://localhost:27017/OnlineMeanShop";
 
 mongoose.connect(url);
 var connection=mongoose.connection;
-
 connection.on('connected', function(){
     console.log('Mongoose connected to ' + url);
 });
