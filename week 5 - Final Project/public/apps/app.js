@@ -7,12 +7,36 @@ myApp.config(['$routeProvider','$locationProvider', function($routeProvider,$loc
         controller: 'homeCtrl'
     });
     $routeProvider.when('/login', {
-        templateUrl: '/apps/partialViews/account/login.html',
+        templateUrl: '/apps/partialViews/account/login.html'
         //controller: ''
     });
-    $routeProvider.when('/products', {
-        templateUrl: '/apps/partialViews/homepage/main.html',
+    $routeProvider.when('/register', {
+        templateUrl: '/apps/partialViews/account/login.html'
         //controller: ''
+    });
+    $routeProvider.when('/p/details', {
+        templateUrl: '/apps/partialViews/product/details.html',
+        controller: 'productDetailsCtrl'
+    });
+    $routeProvider.when('/p/:name', {
+        templateUrl: '/apps/partialViews/product/main.html',
+        controller: 'productMainCtrl'
+    });
+    $routeProvider.when('/brands', {
+        templateUrl: '/apps/partialViews/brand/main.html',
+        controller: 'brandCtrl'
+    });
+    $routeProvider.when('/deals', {
+        templateUrl: '/apps/partialViews/deal-and-promo/latestdeal.html',
+        controller: 'brandCtrl'
+    });
+    $routeProvider.when('/admin/newbrands', {
+        templateUrl: '/apps/partialViews/admin/newbrand.html',
+        controller: 'adminCtrl'
+    });
+    $routeProvider.when('/pages/aboutus', {
+        templateUrl: '/apps/partialViews/pages/aboutus.html',
+        controller: 'adminCtrl'
     });
     $routeProvider.otherwise({redirectTo: '/404'});
     

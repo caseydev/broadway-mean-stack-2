@@ -9,14 +9,15 @@
 	SmartPhone, Nokia, Samsung, LG, SonyEricsson, Motorola" />
 <!-- //for-mobile-apps -->
 <!-- css files -->
-<link href="/apps/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/apps/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/apps/css/fasthover.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/apps/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="/apps/css/jquery.countdown.css" />
-<link href='//fonts.googleapis.com/css?family=Glegoo:400,700' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/lib/flexisel/css/style.css" />
+<link href='http://fonts.googleapis.com/css?family=Glegoo:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 </head> 
 <body ng-app="myshopapps">
 	<!-- header -->
@@ -40,8 +41,16 @@
 	<script src="/lib/angular/angular.min.js"></script>
 	<script src="/lib/angular-route/angular-route.min.js"></script>
 	<script src="/lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+	<script src="/lib/flexisel/js/jquery.flexisel.js"></script>
 	<script src="/apps/app.js"></script>
-	<script src="/apps/controllers/homectrl.js"></script>
+	<script src="/apps/controllers/homeCtrl.js"></script>
+	<script src="/apps/controllers/mainNavigationCtrl.js"></script>
+	<script src="/apps/controllers/productMainCtrl.js"></script>
+	<script src="/apps/controllers/productDetailsCtrl.js"></script>
+	<script src="/apps/controllers/brandCtrl.js"></script>
+	<script src="/apps/controllers/adminCtrl.js"></script>
+	<script src="/apps/directive/flexisel.js"></script>
+
 	<script type="application/x-javascript">
 		addEventListener("load", function() {
 		    setTimeout(hideURLbar, 0);

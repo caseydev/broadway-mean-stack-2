@@ -9,4 +9,4 @@ var BrandSchema=new Schema({
 });
 
 var model= mongoose.model("Brand",BrandSchema);
-module.export=model;
+module.exports=model;

@@ -9,9 +9,10 @@ var mongoose=require('mongoose');
 var index = require('./routes/index');
 var users = require('./routes/api/users');
 var brands = require('./routes/api/brands');
+var products = require('./routes/api/products');
 var categories = require('./routes/api/category');
 var auth = require('./routes/api/auth');
-
+var promotions=require('./routes/api/promotions');
 // Set default node environment to development
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -55,7 +56,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index(app));
 app.use('/api/users', users);
 app.use('/api/brand', brands);
+app.use('/api/product', products);
 app.use('/api/category', categories);
+app.use('/api/promotion', promotions);
 app.use('/api/auth', auth);
 
 
