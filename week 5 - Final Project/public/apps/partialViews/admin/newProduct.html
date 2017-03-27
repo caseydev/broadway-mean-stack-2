@@ -1,109 +1,122 @@
+<div class="mail">
+    <div class="container">
 <div class="grid_3 grid_4">
-    <h3 class="w3ls-hdg">Horizontal Form</h3>
+    <h3 class="w3ls-hdg">New Product</h3>
     <div class="tab-content">
         <div class="tab-pane active" id="horizontal-form">
             <form class="form-horizontal">
                 <div class="form-group">
-                    <label for="focusedinput" class="col-sm-2 control-label">Focused Input</label>
+                    <label for="title" class="col-sm-2 control-label">Title</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control1" id="focusedinput" placeholder="Default Input">
+                        <input type="text" class="form-control1" id="title" placeholder="title">
                     </div>
-                    <div class="col-sm-2 jlkdfj1">
+                    <div class="col-sm-2 ">
                         <p class="help-block">Your help text!</p>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="disabledinput" class="col-sm-2 control-label">Disabled Input</label>
+                    <label for="price" class="col-sm-2 control-label">price</label>
                     <div class="col-sm-8">
-                        <input disabled="" type="text" class="form-control1" id="disabledinput" placeholder="Disabled Input">
+                        <input type="text" class="form-control1" id="price" placeholder="price">
+                    </div>
+                    <div class="col-sm-2 ">
+                        <p class="help-block">Your help text!</p>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+                <label for="actualPrice" class="col-sm-2 control-label">Actual Price</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control1" id="actualPrice" placeholder="actualPrice">
+                </div>
+                <div class="col-sm-2 ">
+                    <p class="help-block">Your help text!</p>
+                </div>
+            </div>
+                <div class="form-group">
+                    <label for="stock" class="col-sm-2 control-label">Unit Stock</label>
                     <div class="col-sm-8">
-                        <input type="password" class="form-control1" id="inputPassword" placeholder="Password">
+                        <input type="text" class="form-control1" id="stock" placeholder="stock">
+                    </div>
+                    <div class="col-sm-2 ">
+                        <p class="help-block">Your help text!</p>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="checkbox" class="col-sm-2 control-label">Checkbox</label>
+                    <label for="description" class="col-sm-2 control-label">Description</label>
                     <div class="col-sm-8">
-                        <div class="checkbox-inline1"><label><input type="checkbox"> Unchecked</label></div>
-                        <div class="checkbox-inline1"><label><input type="checkbox" checked=""> Checked</label></div>
-                        <div class="checkbox-inline1"><label><input type="checkbox" disabled=""> Disabled Unchecked</label></div>
-                        <div class="checkbox-inline1"><label><input type="checkbox" disabled="" checked=""> Disabled Checked</label></div>
+                        <textarea id="description" name="description" class="form-control1" placeholder="description" rows="4" cols="50"></textarea>
+                    </div>
+                    <div class="col-sm-2 ">
+                        <p class="help-block">Your help text!</p>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="checkbox" class="col-sm-2 control-label">Checkbox Inline</label>
+                    <label for="specification" class="col-sm-2 control-label">specification</label>
                     <div class="col-sm-8">
-                        <div class="checkbox-inline"><label><input type="checkbox"> Unchecked</label></div>
-                        <div class="checkbox-inline"><label><input type="checkbox" checked=""> Checked</label></div>
-                        <div class="checkbox-inline"><label><input type="checkbox" disabled=""> Disabled Unchecked</label></div>
-                        <div class="checkbox-inline"><label><input type="checkbox" disabled="" checked=""> Disabled Checked</label></div>
+                        <textarea id="specification" name="specification" class="form-control1" placeholder="specification" rows="4" cols="50"></textarea>
+
+                    </div>
+                    <div class="col-sm-2 ">
+                        <p class="help-block">Your help text!</p>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="selector1" class="col-sm-2 control-label">Dropdown Select</label>
-                    <div class="col-sm-8"><select name="selector1" id="selector1" class="form-control1">
-                        <option>Lorem ipsum dolor sit amet.</option>
+                    <label for="brand" class="col-sm-2 control-label">Brand</label>
+                    <div class="col-sm-8">
+                        <select name="brand" id="brand" class="form-control1">
+                        <option>--- choose --- </option>
                         <option>Dolore, ab unde modi est!</option>
                         <option>Illum, fuga minus sit eaque.</option>
                         <option>Consequatur ducimus maiores voluptatum minima.</option>
-                    </select></div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Multiple Select</label>
-                    <div class="col-sm-8">
-                        <select multiple="" class="form-control1">
-                            <option>Option 1</option>
-                            <option>Option 2</option>
-                            <option>Option 3</option>
-                            <option>Option 4</option>
-                            <option>Option 5</option>
-                        </select>
+                    </select>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="txtarea1" class="col-sm-2 control-label">Textarea</label>
-                    <div class="col-sm-8"><textarea name="txtarea1" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div>
-                </div>
-                <div class="form-group">
-                    <label for="radio" class="col-sm-2 control-label">Radio</label>
+                    <label class="col-sm-2 control-label">Category</label>
                     <div class="col-sm-8">
-                        <div class="radio block"><label><input type="radio"> Unchecked</label></div>
-                        <div class="radio block"><label><input type="radio" checked=""> Checked</label></div>
-                        <div class="radio block"><label><input type="radio" disabled=""> Disabled Unchecked</label></div>
-                        <div class="radio block"><label><input type="radio" disabled="" checked=""> Disabled Checked</label></div>
+                        <div class="checkbox-inline1"><label><input type="checkbox"> Mobile</label></div>
+                        <div class="checkbox-inline1"><label><input type="checkbox"> Laptop</label></div>
+                        <div class="checkbox-inline1"><label><input type="checkbox"> Watch</label></div>
+                        <div class="checkbox-inline1"><label><input type="checkbox"> Camera</label></div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="radio" class="col-sm-2 control-label">Radio Inline</label>
+                    <label for="isActive" class="col-sm-2 control-label">is Active</label>
                     <div class="col-sm-8">
-                        <div class="radio-inline"><label><input type="radio"> Unchecked</label></div>
-                        <div class="radio-inline"><label><input type="radio" checked=""> Checked</label></div>
-                        <div class="radio-inline"><label><input type="radio" disabled=""> Disabled Unchecked</label></div>
-                        <div class="radio-inline"><label><input type="radio" disabled="" checked=""> Disabled Checked</label></div>
-                    </div>
+                        <div class="checkbox-inline"><label><input type="checkbox" id="isActive" checked="checked"> Yes</label></div>
+                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="smallinput" class="col-sm-2 control-label label-input-sm">Small Input</label>
+                    <label for="image" class="col-sm-2 control-label">Image</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control1 input-sm" id="smallinput" placeholder="Small Input">
+                        <input type="file" class="form-control1" id="image" placeholder="image">
                     </div>
                 </div>
+                <fieldset>
+                    <legend>Product Variant:</legend>
+                    <div class="form-group" ng-repeat="variant in variantinputs">
+                        <label class="col-sm-2 control-label">Variant 1</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control1" ng-model="variant.key" placeholder="key">
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control1" ng-model="variant.value" placeholder="value">
+                        </div>
+                        <div class="col-sm-2 ">
+                            <button class="btn btn-danger pull-right" ng-show="$last" ng-click="removeChoice()">Remove</button>
+                        </div>
+
+                    </div>
+                    <button class="btn btn-primary pull-right" ng-click="addvariantfield()">Add </button>
+                </fieldset>
                 <div class="form-group">
-                    <label for="mediuminput" class="col-sm-2 control-label">Medium Input</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control1" id="mediuminput" placeholder="Medium Input">
-                    </div>
-                </div>
-                <div class="form-group mb-n">
-                    <label for="largeinput" class="col-sm-2 control-label label-input-lg">Large Input</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control1 input-lg" id="largeinput" placeholder="Large Input">
+                    <div class="col-sm-6">
+                        <button class="btn btn-primary pull-right" ng-disabled="brandform.$invalid" type="submit">Submit</button>
                     </div>
                 </div>
             </form>
         </div>
+    </div>
+</div>
     </div>
 </div>

@@ -30,9 +30,17 @@ myApp.config(['$routeProvider','$locationProvider', function($routeProvider,$loc
         templateUrl: '/apps/partialViews/deal-and-promo/latestdeal.html',
         controller: 'brandCtrl'
     });
+    $routeProvider.when('/admin/newproduct', {
+        templateUrl: '/apps/partialViews/admin/newproduct.html',
+        controller: 'productManagementCtrl'
+    });
+    $routeProvider.when('/admin/newcategory', {
+        templateUrl: '/apps/partialViews/admin/newcategory.html',
+        controller: 'categoryManagementCtrl'
+    });
     $routeProvider.when('/admin/newbrands', {
         templateUrl: '/apps/partialViews/admin/newbrand.html',
-        controller: 'adminCtrl'
+        controller: 'brandManagementCtrl'
     });
     $routeProvider.when('/pages/aboutus', {
         templateUrl: '/apps/partialViews/pages/aboutus.html',

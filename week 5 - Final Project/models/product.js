@@ -23,7 +23,7 @@ var ProductSchema = new Schema({
     // features: Array,
     // keyFeatures: Array,
     UserReview:[ProductReviewSchema],
-    isActive:{type:Boolean},
+    isActive:{type:Boolean,default:true},
     createdDate:{type:Date,default:Date.Now}
 }).index({
     'title': 'text',
