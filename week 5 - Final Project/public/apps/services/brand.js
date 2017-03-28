@@ -6,14 +6,19 @@
  *
  *
  * */
-myApp.service('brand', function($http){
+myApp.service('Brand', function($http){
 
     this.getBrands = function() {
-        var brandApiUrl='/api/brand/';
-        $http.get(url).then(function(result){
-            return result;
-        })
+       return $http.get('/api/brand/');
     };
-
+    this.getBrand = function(id)  {
+        return $http.get('/api/brand/' + id);
+    };
+    this.createBrand = function(brandObj)  {
+        return $http.post('/api/brand/', brandObj);
+    };
+    this.editBrand = function(editedbrandObj)  {
+        return $http.put('/api/brand/', editedbrandObj);
+    }
 });
 
