@@ -7,7 +7,8 @@ var CategorySchema=new Schema({
     subCategory:[{type: Schema.Types.ObjectId, ref: 'Category'}],
     description:{type:String},
     isActive:{type:Boolean},
-    showInMainNavigation:Boolean
+    showInMainNavigation:Boolean,
+    isNewCategory:Boolean
 });
 
 var model= mongoose.model("Category",CategorySchema);

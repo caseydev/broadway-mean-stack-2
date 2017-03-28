@@ -11,6 +11,17 @@ router.get('/productbyId/:id', function(req, res, next) {
 
     res.send('respond with a resource');
 });
+
+router.get('/latestarrival', function(req, res, next) {
+    Products.find({'isActive': true}).sort('-createdDate').limit(10).exec(function(err, products){
+       if(err){
+           res.status(400).send('error');
+       }
+        res.status(200).send(products);
+    });
+
+});
+
 router.get('/newProduct', function(req, res, next) {
     Products.find(function(err,data){
         if(err){

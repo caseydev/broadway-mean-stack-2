@@ -24,7 +24,8 @@ var ProductSchema = new Schema({
     // keyFeatures: Array,
     UserReview:[ProductReviewSchema],
     isActive:{type:Boolean,default:true},
-    createdDate:{type:Date,default:Date.Now}
+    isFeatured: { type: Boolean },
+    createdDate:{type: Date, default: Date.now}
 }).index({
     'title': 'text',
     'description': 'text'

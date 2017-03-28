@@ -1,4 +1,4 @@
-var myApp=angular.module('myshopapps', ['ngRoute','ui.bootstrap']);
+var myApp=angular.module('myshopapps', ['ngRoute','ui.bootstrap','ngFileUpload']);
 
 myApp.config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider){
     $locationProvider.hashPrefix('');

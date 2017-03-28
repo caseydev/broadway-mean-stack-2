@@ -10,12 +10,20 @@
 myApp.controller('adminCtrl', function($scope,$http){
 
 
-}).controller('brandManagementCtrl', function($scope,$http){
+}).controller('brandManagementCtrl', function($scope,Upload){
     $scope.saveBrand=function(isValid) {
         console.log($scope.brandlogo);
         if (isValid) {
-            $http.post('/api/brand/', {}).then(function (result) {
-
+            Upload.upload({
+                url: '/api/brand/',
+                data: {brandlogo: $scope.brandlogo, 'name': $scope.brandname,'description':$scope.description}
+            }).then(function (resp) {
+               // console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
+            }, function (resp) {
+                //console.log('Error status: ' + resp.status);
+            }, function (evt) {
+                //var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+                //console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
             });
         }
     }

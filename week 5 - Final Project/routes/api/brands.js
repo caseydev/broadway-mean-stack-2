@@ -7,7 +7,8 @@ var storage = multer.diskStorage({
         cb(null, 'public/apps/images/')
     },
     filename: function (req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now())
+        //console.log('file',file);
+        cb(null, file.originalname)
     }
 });
 var upload = multer({  storage: storage });
@@ -24,12 +25,15 @@ router.get('/', function(req, res, next) {
 }).post('/', upload.single('brandlogo'),function(req, res, next) {
    var newBrand=new Brand({
        name:req.body.name,
-       //imageUrl:req.body.imageUrl,
+       imageUrl:req.file.originalname,//image does not embedd on req.body.it embed on req.file
        description:req.body.description,
        isActive:req.body.isActive
    });
     newBrand.save(function(err,newbrand){
-
+     if(err){
+         res.status(400).send(err.message);
+     }
+        res.status(200).send(newbrand);
     });
 
 }).put('/', function(req, res, next) {
