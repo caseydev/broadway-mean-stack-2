@@ -1,11 +1,18 @@
+/**
+ * Module dependencies.
+ */
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
+const compression = require('compression');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 var mongoose=require('mongoose');
 
+// ****** import all route api file *****************
 var index = require('./routes/index');
 var users = require('./routes/api/users');
 var brands = require('./routes/api/brands');
@@ -49,10 +56,19 @@ app.set('view engine', 'html');
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+    secret: 'thisisjptsessionhai',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: true },
+    store: new MongoStore({mongooseConnection: connection })
+}));
+//app.use(compression())
 
+// ****route defination*******
 app.use('/', index(app));
 app.use('/api/users', users);
 app.use('/api/brand', brands);
@@ -62,7 +78,7 @@ app.use('/api/promotion', promotions);
 app.use('/api/auth', auth);
 
 
-// catch 404 and forward to error handler
+// ****catch 404 and forward to error handler*******
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
