@@ -20,6 +20,7 @@ var products = require('./routes/api/products');
 var categories = require('./routes/api/category');
 var auth = require('./routes/api/auth');
 var promotions=require('./routes/api/promotions');
+
 // Set default node environment to development
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -46,8 +47,11 @@ connection.on('disconnected', function() {
 });
 
 var app = express();
+// ****** socketjs configuration
+var server = require('http').createServer(app);
+var io = require('socket.io')(server);
 
-// view engine setup
+// **** view engine setup
 app.set('views', path.join(__dirname, 'public/apps/'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
@@ -67,7 +71,13 @@ app.use(session({
     store: new MongoStore({mongooseConnection: connection })
 }));
 //app.use(compression())
-
+// app.use(function(req, res, next) {
+//     io.on('connection', function(socket) {
+//         socket.emit("message:onconnection",{name:"hello User"} );
+//         res.io = io;
+//     });
+//     next();
+// });
 // ****route defination*******
 app.use('/', index(app));
 app.use('/api/users', users);
@@ -77,10 +87,11 @@ app.use('/api/category', categories);
 app.use('/api/promotion', promotions);
 app.use('/api/auth', auth);
 
+require('./sockets/base')(io);
 
 // ****catch 404 and forward to error handler*******
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+    var err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
@@ -96,4 +107,4 @@ app.use(function(err, req, res, next) {
   res.send(err.message);
 });
 
-module.exports = app;
+module.exports = {app:app,server:server};

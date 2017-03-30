@@ -1,4 +1,4 @@
-var myApp=angular.module('myshopapps', ['ngRoute','ui.bootstrap','ngFileUpload']);
+var myApp=angular.module('myshopapps', ['ngRoute','ui.bootstrap','ngFileUpload','btford.socket-io','toaster']);
 
 myApp.config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider){
     $locationProvider.hashPrefix('');
@@ -45,6 +45,10 @@ myApp.config(['$routeProvider','$locationProvider', function($routeProvider,$loc
     $routeProvider.when('/pages/aboutus', {
         templateUrl: '/apps/partialViews/pages/aboutus.html',
         controller: 'adminCtrl'
+    });
+    $routeProvider.when('/pages/chat', {
+        templateUrl: '/apps/partialViews/pages/chat.html',
+        controller: 'chatCtrl'
     });
     $routeProvider.otherwise({redirectTo: '/404'});
     
