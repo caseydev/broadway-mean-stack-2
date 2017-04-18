@@ -11,15 +11,8 @@ var bodyParser = require('body-parser');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 var mongoose=require('mongoose');
+var passport=require('passport');
 
-// ****** import all route api file *****************
-var index = require('./routes/index');
-var users = require('./routes/api/users');
-var brands = require('./routes/api/brands');
-var products = require('./routes/api/products');
-var categories = require('./routes/api/category');
-var auth = require('./routes/api/auth');
-var promotions=require('./routes/api/promotions');
 
 // Set default node environment to development
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
@@ -45,6 +38,15 @@ connection.on('error', function() {
 connection.on('disconnected', function() {
     console.log("oops, Connection DisConnected.")
 });
+// ****** import all route api file *****************
+var index = require('./routes/index');
+var users = require('./routes/api/users');
+var brands = require('./routes/api/brands');
+var products = require('./routes/api/products');
+var categories = require('./routes/api/category');
+var auth = require('./routes/api/auth');
+var promotions=require('./routes/api/promotions');
+
 
 var app = express();
 // ****** socketjs configuration
@@ -70,6 +72,9 @@ app.use(session({
     cookie: { secure: true },
     store: new MongoStore({mongooseConnection: connection })
 }));
+app.use(passport.initialize());
+app.use(passport.session());
+require('./config/passport');
 //app.use(compression())
 // app.use(function(req, res, next) {
 //     io.on('connection', function(socket) {

@@ -1,10 +1,10 @@
-const mongoose = require('mongoose');
 var passport = require('passport');
-var User=require('./models/User');
-const local = require('./passport/local');
-const google = require('./passport/google');
-const facebook = require('./passport/facebook');
-const twitter = require('./passport/twitter');
+var User=require('../models/user');
+const local = require('./passport/local')(User);
+//const google = require('./passport/google');
+//const facebook = require('./passport/facebook');
+//const twitter = require('./passport/twitter');
+
 
 
 passport.serializeUser(function(user, done) {
@@ -18,6 +18,6 @@ passport.deserializeUser(function(id, done) {
 });
 // use these strategies
 passport.use(local);
-passport.use(google);
-passport.use(facebook);
-passport.use(twitter);
+//passport.use(google);
+//passport.use(facebook);
+//passport.use(twitter);
