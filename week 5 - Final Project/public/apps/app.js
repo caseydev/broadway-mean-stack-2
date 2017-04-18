@@ -7,8 +7,8 @@ myApp.config(['$routeProvider','$locationProvider', function($routeProvider,$loc
         controller: 'homeCtrl'
     });
     $routeProvider.when('/login', {
-        templateUrl: '/apps/partialViews/account/login.html'
-        //controller: ''
+        templateUrl: '/apps/partialViews/account/login.html',
+        controller: 'loginCtrl'
     });
     $routeProvider.when('/register', {
         templateUrl: '/apps/partialViews/account/login.html'

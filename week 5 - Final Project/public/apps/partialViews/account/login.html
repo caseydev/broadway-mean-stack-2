@@ -14,9 +14,9 @@
                     <uib-tab class="tab-1 resp-tab-content resp-tab-content-active" index="0" heading="Sign in">
                         <div class="facts">
                             <div class="register">
-                                <form action="#" method="post">
-                                    <input name="Email" placeholder="Email Address" type="text" required="">
-                                    <input name="Password" placeholder="Password" type="password" required="">
+                                <form name="loginForm" ng-submit="loginUser(loginForm.$valid)">
+                                    <input name="Email" placeholder="Email Address" type="text" ng-model="user.email" ng-required="">
+                                    <input name="Password" placeholder="Password" type="password" ng-model="user.password" ng-required="">
                                     <div class="sign-up">
                                         <input type="submit" value="Sign in">
                                     </div>
